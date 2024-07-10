@@ -45,6 +45,27 @@ public class LaptopController {
 		return new ResponseEntity<>(laptopDTO,HttpStatus.OK);
 	}
 	
+// There are some extra line of code which is used to display custom message when the validation of provided JSON data is failed .
+//	@PutMapping("/{id}")
+//	public ResponseEntity<?> updateLaptop(@PathVariable("id") Long id, @Valid @RequestBody LaptopDTO laptopdto, BindingResult result){
+//		List<String> displayErrors = new ArrayList<String>();
+//		
+//		if (result.hasErrors()) {
+//			List<FieldError> errors = result.getFieldErrors();
+//			
+//			for(FieldError err:errors) {
+//				displayErrors.add(err.getField() + ": " + err.getDefaultMessage());
+//				System.out.println( displayErrors);
+//			}
+//			
+//			return ResponseEntity.badRequest().body(displayErrors);
+//		}
+//		
+//		LaptopDTO laptop = laptopService.updateLaptop(id, laptopdto);
+//		return new ResponseEntity<>(laptop, HttpStatus.OK);
+//		
+//	}
+	
 	@PutMapping("/{id}")
 	public ResponseEntity<LaptopDTO> updateLaptop(@Valid @RequestBody LaptopDTO laptopDTO, @PathVariable Long id) {
 		LaptopDTO updatedLaptop = laptopService.updateLaptop(laptopDTO, id);
