@@ -1,6 +1,6 @@
 # Laptop-Store
 
-# Following is the requirement specifications:
+# 📖 Following is the requirement specifications:
 	1 Create a Laptop
 	2 Update the existing Laptop details
 	3 Get the Laptop by Id
